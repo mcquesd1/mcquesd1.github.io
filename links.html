@@ -10,8 +10,13 @@
     <title>Scott McQueen - Portfolio</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <link rel="stylesheet" href="thumbnail-gallery.css">
     <link rel="icon" href="banner.jpg">
 </head>
@@ -23,17 +28,25 @@
             <nav class="navbar navbar-inverse navbar-fixed-top">
 
                 <div class="navbar-header">
+                    <button type="button" id="btnCollapse" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                                                        <span class="sr-only">Toggle navigation</span>
+                                                        <span class="icon-bar"></span>
+                                                        <span class="icon-bar"></span>
+                                                        <span class="icon-bar"></span>
+                                                      </button>
+
                     <a class="navbar-brand" href="index.html">Scott McQueen : Portfolio Home</a>
                 </div>
-                <ul class="nav navbar-nav">
-                    <li><a href="pprof.html">Professional Proficiency</a></li>
-                    <li><a href="journey.html">The Journey</a></li>
-                    <li><a href="tprof.html">Technical Proficiency</a></li>
-                    <li class="active"><a href="links.html">Links & Resources</a></li>
-                    <li><a href="timeline.html">Timeline</a></li>
-                    <li><a href="CV.html">Cirriculum Vitae</a></li>
-                </ul>
-
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="pprof.html">Professional Proficiency</a></li>
+                        <li><a href="journey.html">The Journey</a></li>
+                        <li><a href="tprof.html">Technical Proficiency</a></li>
+                        <li class="active"><a href="links.html">Links & Resources</a></li>
+                        <li><a href="timeline.html">Timeline</a></li>
+                        <li><a href="CV.html">Cirriculum Vitae</a></li>
+                    </ul>
+                </div>
             </nav>
 
             <span class="padder"></span>
@@ -43,17 +56,18 @@
 
                 <p>
                     This is a list of links that I used during the Software Engineering project. It contains links to sites that provided tutorials,
-                    code examples, videos, fixes, validation. Here you will also find resources such as my Slack, Trello and GIT activity and contributions.
+                    code examples, videos, fixes, validation. Here you will also find resources such as my Slack, Trello
+                    and GIT activity and contributions.
                 </p>
 
 
 
 
 
-<h3>Tutorials</h3>
+                <h3>Tutorials</h3>
                 <a href="https://www.lynda.com/Bootstrap-training-tutorials/1421-0.html" target="new">Bootstrap tutorial on Lynda</a><br>
-                <a href="https://www.w3schools.com/bootstrap/default.asp" target="new">W3 schools Bootstrap tutorial</a><br>        
-                <a href="https://v4-alpha.getbootstrap.com/" target="new">Bootstrap homepage</a><br>                
+                <a href="https://www.w3schools.com/bootstrap/default.asp" target="new">W3 schools Bootstrap tutorial</a><br>
+                <a href="https://v4-alpha.getbootstrap.com/" target="new">Bootstrap homepage</a><br>
                 <a href="https://www.youtube.com/watch?v=BmHLvUdkCA0&list=PL530D33D6E548481F" target="new">John Morris PHP form building concepts (youtube)</a><br>
                 <h3>Troubleshooting, fixes, and code examples</h3>
                 <a href="https://stackoverflow.com/questions/25669875/bootstrap-navbar-button-dropdown-wont-disappear-on-click" target="new">Fix for navbar not collapsing on click</a><br>
@@ -62,7 +76,7 @@
                 <a href="https://tristandenyer.com/demos/dynamic-form-bootstrap-3-3-4-multiple.html" target="new">Bootstrap clone form elements example</a><br>
                 <a href="https://www.freeformatter.com/html-validator.html" target="new">HTML Validator</a><br>
                 <h3>Portfolio</h3>
-                <a href="https://tutorialzine.com/2017/02/freebie-4-bootstrap-galleries" target="new">Bootstrap gallery template (my porfolio home page)</a><br>                
+                <a href="https://tutorialzine.com/2017/02/freebie-4-bootstrap-galleries" target="new">Bootstrap gallery template (my porfolio home page)</a><br>
                 <a href="http://www.kodingmadesimple.com/2015/07/how-to-embed-pdf-file-in-html-page.html" target="new">PDF embedding into HTML</a><br>
                 <hr><br>
                 <h2 class="text-center">GIT commit history</h2>
@@ -70,14 +84,21 @@
                 <br><br>
                 <h2 class="text-center">Aviaiton Claims Trello Kanban Board</h2>
                 <p class="text-center">(Not the full board - There are a lot more "done" items)
-                    <img src="trello.PNG" alt="trello" class="center-block"><br>
+                    <img src="trello.jpg" alt="trello" class="center-block"><br>
                     <br><br>
                     <h2 class="text-center">Slack History</h2>
                     <embed class="center-block" width="850" height="900" src="./SEPslack.pdf" type="application/pdf"></embed>
             </div>
         </div>
         <span class="padder"></span>
-            
+        <script>
+                
+                //Collapsible navbar script. Collapses the menu when a link is clicked
+                $(".a").click(function () {
+                    if ($("#btnCollapse").css('display') != 'none')
+                        $("#btnCollapse").click();
+                });
+            </script>
 </body>
 
 </html>

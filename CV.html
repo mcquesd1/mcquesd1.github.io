@@ -10,8 +10,13 @@
     <title>Scott McQueen - Portfolio</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <link rel="stylesheet" href="thumbnail-gallery.css">
     <link rel="icon" href="banner.jpg">
 </head>
@@ -23,37 +28,52 @@
             <nav class="navbar navbar-inverse navbar-fixed-top">
 
                 <div class="navbar-header">
+                    <button type="button" id="btnCollapse" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                                                        <span class="sr-only">Toggle navigation</span>
+                                                        <span class="icon-bar"></span>
+                                                        <span class="icon-bar"></span>
+                                                        <span class="icon-bar"></span>
+                                                      </button>
+
                     <a class="navbar-brand" href="index.html">Scott McQueen : Portfolio Home</a>
                 </div>
-                <ul class="nav navbar-nav">
-                    <li><a href="pprof.html">Professional Proficiency</a></li>
-                    <li><a href="journey.html">The Journey</a></li>
-                    <li><a href="tprof.html">Technical Proficiency</a></li>
-                    <li><a href="links.html">Links & Resources</a></li>
-                    <li><a href="timeline.html">Timeline</a></li>
-                    <li class="active"><a href="CV.html">Cirriculum Vitae</a></li>
-                </ul>
-
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="pprof.html">Professional Proficiency</a></li>
+                        <li><a href="journey.html">The Journey</a></li>
+                        <li><a href="tprof.html">Technical Proficiency</a></li>
+                        <li><a href="links.html">Links & Resources</a></li>
+                        <li><a href="timeline.html">Timeline</a></li>
+                        <li class="active"><a href="CV.html">Cirriculum Vitae</a></li>
+                    </ul>
+                </div>
             </nav>
 
             <span class="padder"></span>
             <div>
                 <h1 class="text-center">Cirriculum Vitae</h1>
-                
+
 
                 <span class="padder2"></span>
-                
-
-                    <embed class="center-block" width="1000" height="1200" src="CV.pdf" type="application/pdf"></embed>
 
 
-                    
-                
+                <embed class="center-block" width="1000" height="1200" src="CV.pdf" type="application/pdf"></embed>
+
+
+
+
 
             </div>
 
         </div>
-
+        <script>
+                
+                //Collapsible navbar script. Collapses the menu when a link is clicked
+                $(".a").click(function () {
+                    if ($("#btnCollapse").css('display') != 'none')
+                        $("#btnCollapse").click();
+                });
+            </script>
 </body>
 
 </html>
