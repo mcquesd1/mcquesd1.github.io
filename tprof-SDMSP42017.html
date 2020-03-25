@@ -39,9 +39,12 @@
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    
-                    <li class="active"><a href="tprof.html">Work Project</a></li>
-                   
+                    <li><a href="pprof.html">Professional Proficiency</a></li>
+                    <li><a href="timeline.html">Timeline</a></li>
+                    <li class="active"><a href="tprof.html">Technical Proficiency</a></li>
+                    <li><a href="CV.html">Curriculum Vitae</a></li>
+                    <li><a href="journey.html">The Journey</a></li>
+                    <li><a href="links.html">Links & Resources</a></li>
                 </ul>
             </div>
         </nav>
@@ -68,7 +71,7 @@
         <br>
         <h3>Background</h3>
 
-        <p>Venues generate GMP (gaming machine profit) and a weekly return amount is calculated each Monday. Venues have 5 days to bank the weekly return amount. The finance department produce a text file twice a week from the accounting system. The Monday
+        <p>Venues generate GMP (gaming machine profit) and a weekly return amount is calculated each Monday. Venues have 5 days to bank the weekly return amount. The finance department produce twice weekly a txt file from the accounting system. The Monday
             file contains the banking figure generated from the previous week’s activity. The Friday file contains the current arrears for the venues. This arrears needs to be banked on the Friday to stay within the 5 days period. The notifications required
             are:
         </p>
@@ -85,7 +88,7 @@
 
         <center><img src="f1banking.png" alt="GIT screenshot" width="900px"></center>
         <br>
-        <p>Each key person can opt in for both Monday and Friday notifications via email and/ or SMS. Figure 2 shows a sample of abbreviated data (notification preferences only) from the key persons list. Each full key person record has 32 properties. <br>Figure
+        <p>Each key person can opt in for both Monday and Friday notifications via email and/or SMS. Figure 2 shows a sample of abbreviated data (notification preferences only) from the key persons list. Each full key person record has 32 properties. <br>Figure
             2. Key persons list showing notification preferences.
         </p>
         <center><img src="f2banking.png" alt="GIT screenshot" width="900px"></center><br>
@@ -107,9 +110,6 @@
         </p>
         <code><strong><p class="text-center">powershell.exe -ExecutionPolicy Bypass -file BankingsToSharePointList.ps1</p></strong></code>
         <br><br>
-        <p>
-            With the data uploaded to Sharepoint the next step was to create the flows that will send the notifications. 
-        </p><br>
         <h3>Power Automate</h3>
         <div class="row">
             <div class="col-md-9">
@@ -145,11 +145,10 @@
         <center><img alt="Bootstrap Image Preview" width="300px" src="ff1.jpg" /></center>
         <center><img alt="Bootstrap Image Preview" width="700px" src="ff2.png" /></center><br>
         <h4>First run reflection</h4>
-        <p>The flow worked however it ran 50 times, once for each item that was added to the Bankings Due list. Depending on what Microsoft subscription you have there can be limits on the number of flows you can run. I decided the current model was not very scalable
-            and could cause issues in the future when additional flows were added. I decided to create a new Sharepoint list that would be the trigger. The process now was to upload the banking items as usual, then trigger a flow that would run just once and evaluate all 50 items on the bankings due list.
-            The new trigger list contained a simple reference field as well as a staff name. By showing this information in the user interface staff could see a history of notifications including the date and time they were executed. This would provide certainty 
-            to staff as to whether another user had already run the flow, and prevent it from being run twice.
-
+        <p>The flow worked however it ran 50 times, once for each item that was added to the Bankings Due list. Depending on what subscription you have there can be limits on the number of flows you can run. I decided the current model was not very scalable
+            and could cause issues in the future if additional flows were added. I decided to create a new trigger list. The idea then was to upload the banking items as usual, then trigger 1 flow that would evaluate all 50 items on the bankings due list.
+            The new trigger list contained a simple reference field as well as a staff name. By showing this information in the user interface staff could see a history of notifications including the date and time they were executed. This proved to be
+            beneficial as previously there was no way for a user to find out the flow history.
         </p><br>
         <h4>SMS Notifications</h4>
         <p>I began using the Nexmo and Telesign connectors available through Power Automate. I created accounts and ran tests. I had issues sending SMS messages to Vodafone numbers. They were reported as being successfully sent but weren’t being received.
@@ -163,11 +162,9 @@
         <center><img alt="Bootstrap Image Preview" width="700px" src="smsflow.jpg" /></center>
         <center><img alt="Bootstrap Image Preview" width="400px" src="smsflow2.jpg" /></center><br>
         <h4>Making the process efficient</h4>
-        <p>Efficiencies can be made by creating views in a Sharepoint list that limit the number of columns returned. The Key Persons list is a good example of this as there are 32 columns, but I created a view that contained only relevant columns to the
+        <p>Efficiencies can be made by creating views in a Sharepoint list that limit the number of columns returned. The Key Persons list is a good example of this as there is 32 columns, but I created a view that contained only relevant columns to the
             notifications process. Further efficiencies can be made by filtering the data being passed into the flows at the beginning rather than using conditional statements operating on larger data sets. Power Automate offers OData filter queries to
-            restrict the amount of data that is evaluated. I used this filtering to bring in only the required data.</p>
-            <center><img alt="Bootstrap Image Preview" width="400px" src="odata.PNG" /></center><br>
-            There are some gotchas when working with different applications as some have differing conditional logic syntax. The table below shows
+            restrict the amount of data that is evaluated. I used this filtering to bring in only the required data. There are some gotchas when working with different applications as some have differing conditional logic syntax. The table below shows
             a Boolean field example. </p><br>
         <table class="table table-bordered">
             <thead>
@@ -199,17 +196,43 @@
         <p>
             As the banking notifications were a twice weekly event containing new and different data each time, consideration needed to be given to data maintenance of the Sharepoint list that feeds the notifications. To acomplish this I created a scheduled flow
             in Power Automate to purge the list of all entries. This flow would run the day before the Notification send date. The SMS process needed additional consideration given to data management. For this process I added actions to the flow that
-            would delete both the list items that populated the CSV file, and the CSV file itself before creating the new file. I also personalised the message to venue operators by adding the staff user name entered from the initial trigger.
+            would delete both the list items that populated the CSV file, and the CSV file itself before creating the new file. I also personalised the message to venue operators by adding the user name entered from the initial trigger.
         </p>
         <br>
-        <h3>User Interface</h3>
+        <h4>User Interface</h4>
         <p>
 
         </p>
-        <center><img src="notificationUserInterface.PNG" width="800px" style="border:1px solid grey" alt="slack screenshot"></center>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="text-center">
+                    <img src="slackrs.JPG" alt="slack screenshot">
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="text-center">
+                    <img src="slackrs1.JPG" alt="slack screenshot">
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="text-center">
+                    <img src="slackrs2.JPG" alt="slack screenshot">
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="text-center">
+                    <img src="slackrs3.JPG" alt="slack screenshot">
+                </div>
+            </div>
+        </div>
 
-
-        <h3>Powerapps</h3>
+        <h3>Code contributions</h3>
         <div class="panel panel-default">
             <div class="panel-body">
                 <div class="text-center">
@@ -245,7 +268,7 @@
 
     </div>
     <div id="footer">
-        <div class="text-center">Scott McQueen - Portfolio 2020
+        <div class="text-center">Scott McQueen - Software Engineering Portfolio 2017
             <p><a id="femail" href="mailto:mcquesd1@student.op.ac.nz">mcquesd1@student.op.ac.nz</a></p>
         </div>
     </div>
