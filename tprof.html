@@ -198,15 +198,46 @@
         <h4>Refining the process</h4>
         <p>
             As the banking notifications were a twice weekly event containing new and different data each time, consideration needed to be given to data maintenance of the Sharepoint list that feeds the notifications. To acomplish this I created a scheduled flow
-            in Power Automate to purge the list of all entries. This flow would run the day before the Notification send date. The SMS process needed additional consideration given to data management. For this process I added actions to the flow that
-            would delete both the list items that populated the CSV file, and the CSV file itself before creating the new file. I also personalised the message to venue operators by adding the staff user name entered from the initial trigger.
+            in Power Automate to purge the list of all entries. This flow would run the day before the Notification send date. The SMS process needed additional consideration given to data management. For this process I added additional actions to the flow itself that
+            would delete both the list items that populated the CSV file, and the CSV file itself before creating the new list items and file. I also personalised the notification messages to venue operators by adding the staff user name entered from the initial trigger.
         </p>
         <br>
         <h3>User Interface</h3>
         <p>
-
+The user interface was built in the Power Apps studio. Here you can choose your initial layout such as tablet or phone. Following that, apps
+are created by adding screens which can have various elements. These elements are linked to data sources and provide the front end functionality to
+allow data maintenance and the processing of workflows.
         </p>
-        <center><img src="notificationUserInterface.PNG" width="800px" style="border:1px solid grey" alt="slack screenshot"></center>
+        <center><img src="powerappsedit.png" width="800px" style="border:1px solid grey" alt="slack screenshot"></center><br>
+<p>
+The Banking notifications is a single screen app using the following elements:
+<ol>
+    <li>
+        <p><strong>Gallery:</strong> Its data source is the Bankings Due Sharepoint list. The users asked for a way to opt out of 
+        sending notifications so I added a checkbox that is linked to a newly created "send Notification" column in the Bankings Due list. 
+        The checkbox works by using the oncheck/offcheck properties to call the patch function which updates the sharepoint list item in real time to either true or false. The flows logic will only send 
+        notifications if the send notification field is set to true.</p> <br>
+        <center><img src="notificationPatch.JPG" width="500px" style="border:1px solid grey" alt="slack screenshot"></center><br>
+        <p>
+            A count feature was also added to show the number of currently selected records.</p><br>    
+            <center><img src="notificationCount.JPG" width="500px" style="border:1px solid grey" alt="slack screenshot"></center><br>
+    </li>
+    <li>
+<p><strong>Table:</strong> Its data source is the trigger list. It is used to display notifications history to the users. The challenge was
+    displaying the modified date in the desired format. For this I used the AddColumns function to create a virtual column for the sort, and passed
+    it the modified date column from the list.</p>  <br>
+    <center><img src="notificationHistoryTableCode.JPG" width="500px" style="border:1px solid grey" alt="slack screenshot"></center><br>
+</p>
+    </li>
+    <li>
+        <p><strong>Form: </strong>The form is the trigger for the notification process. Its data source is the trigger list with the form mode set to new,
+            so that it is ready for new input. The type column is a choice column of either Monday/ Friday. The user name is a person field linked to the 
+            organisation's Active directory. The send notifications button submits the form which added a new item to the trigger list and starts the flow. 
+        </p><br>
+        <center><img src="notificatonSubmitCode.JPG" width="800px" style="border:1px solid grey" alt="slack screenshot"></center>
+    </li>
+</ol>
+</p>
 
 
         <h3>Powerapps</h3>
