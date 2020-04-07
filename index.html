@@ -21,9 +21,21 @@
 
         <h1>Scott McQueen: Portfolio</h1>
         <h2 class="page-description text-center">Project 2020: Semester 1</h2><br>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <p>Project was a combination of:
+            <ul>
+                <li>
+                    Ops work with the BIT platform.
+                </li>
+                <li>
+                    Learning about the DevOps pipeline, Azure and AWS.
+                </li>
+                <li>
+                    Creating various modules for my employer. <a href="tprof.html">Click here for more.</a>
+                </li>
+            </ul>
+        </p>
 
-        <div class="tz-gallery">
+        <!--<div class="tz-gallery">
 
             <div class="row">
 
@@ -33,7 +45,7 @@
                             <img src="./uc.jfif" alt="Pro Prof">
                         </a>
                         <div class="caption">
-                            <h3>Ops / Platform</h3>
+                            <h4>Ops / Platform</h4>
                             <p>
                             </p>
                         </div>
@@ -46,7 +58,7 @@
                             <img src="./uc.jfif" alt="Timeline">
                         </a>
                         <div class="caption">
-                            <h3>Azure / AWS</h3>
+                            <h4>Azure / AWS</h4>
                             <p></p>
                         </div>
                     </div>
@@ -57,12 +69,194 @@
                             <img src="./uc.jfif" alt="Tech Prof">
                         </a>
                         <div class="caption">
-                            <h3>Work Project</h3>
+                            <h4>Work Project</h4>
                             <p></p>
                         </div>
                     </div>
                 </div>
+            </div>-->
+            <h2 class="text-center"></h2>
+  
+  <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#week1">Week 1: Find your feet.</a>
+        </h4>
+      </div>
+      <div id="week1" class="panel-collapse collapse">
+        <div class="panel-body">
+                <p>Gitlab was down which was a headache for a lot of people in the BIT. It was the Ops team that had the pleasure of trying to get it working again. I shadowed James the 2nd year project guy as he / we tried to fix it. Really I had little idea as to what was going on. The certificates needed renewing on the gitlab server and the gateway. Once that was done there was still an error appearing to come from the IDP. 
+                         I had been reading the wiki trying to get a feel for the landscape. I read that the IDP needed keys updated every January. I messaged this to James. He passed this on to Rob. This turned out to be the problem holding it up, so I was happy 
+                        that I had at least made a small contribution to the team.</p>
+                    <center><img src="GitlabFixChat.jpg" width="500px" alt="slack screenshot"></center>
+
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#week2">Week 2: CI/CD Pipeline, Azure fundamentals.</a>
+        </h4>
+      </div>
+      <div id="week2" class="panel-collapse collapse">
+        <div class="panel-body">
+            <p>
+                Week 2 was about settling on a path for the semester. For me that was going to be a combination of learning about DevOps concepts, Azure and AWS, as well as completing a project for my employer.
+                <h4>DevOps</h4>
+                <p>I learned of the CI/CD pipeline. I watched a couple of intructional videos on <a target="new" href="https://www.youtube.com/watch?v=Jav4vbUrqII&t=314s">how to setup a Gitlab pipeline</a>, and <a href="https://www.youtube.com/watch?v=2MBhxk2chhM&pbjreload=10">how to setup a runner.</a> The runner proved difficult and I could not get it working. </p>
+                <center><img src="failedPipeline.png" width="500px" alt="slack screenshot"></center>
+                <h4>Azure</h4>
+                <p>As I knew nothing of Azure I started the <a href="https://docs.microsoft.com/en-us/learn/paths/azure-fundamentals/" target="new">Fundamentals learning path.</a> This consisted of 12 modules covering the basics. I created an Azure account and checked out the portal. </p>
+            </p><br>
+            <h4>Work Project</h4>
+            <p>This week I worked on: </p>
+            <ul><li>Confirming data required in key persons Sharepoint list.</li>
+                <li>Troubleshoot date issue on data upload. </li>
+        </ul>
+                
+            </p>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#week3">Week 3: Created Trello board, Azure VM - Gitlab runner, Test Flows.</a>
+      
+      </div>
+      <div id="week3" class="panel-collapse collapse">
+        <div class="panel-body">
+          
+        <h4>DevOps / Azure</h4>
+            <p>Now that I had created an Azure account I used this to try and get my Gitlab runner up, and did the following:
+              <ul>
+                <li>Created a Linux VM in Azure.</li>
+                <li>Used this guide to <a target="new" href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04">install docker on Ubuntu.</a></li>
+                <center><img src="dockerInstall.png" width="700px" alt="slack screenshot"></center><br>
+                <li><a target="new" href="https://docs.gitlab.com/runner/install/docker.html">Installed Gitlab runner on a container.</a></li>
+                <li><a target="new" href="https://docs.gitlab.com/runner/register/index.html#docker">Register the Docker runner.</a></li>
+              </ul>
+             This proved sucessful and my pipeline was now working with the newly created docker runner.</p>
+            <center><img src="pipelineSucess.png" width="700px" alt="slack screenshot"></center>
+        <h4>Work Project</h4>
+            <p>This week I worked on: </p>
+            <ul><li>Writing and testing flows for the notifications.</li>
+      </ul>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="panel-group">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#week4">Week 4: AWS Intro, Ticketing system.</a>
+            </h4>
+          </div>
+          <div id="week4" class="panel-collapse collapse">
+            <div class="panel-body">
+                <h4>AWS</h4>
+                <p>This week I watched an <a target="new" href="https://www.youtube.com/watch?v=Z3SYDTMP3ME&t=1671s">AWS introductory video</a>, and completed the <a target="new" href="https://aws.amazon.com/getting-started/projects/break-monolith-app-microservices-ecs-docker-ec2/module-one/">"Break the monolith"</a> project, 
+                  which separates a monolithic application into microservices using AWS technologies.
+             
+                 </p><br>
+            <h4>Ops</h4>
+            <p>As a group we decided that we needed a ticketing system as the current one was broken. Rather than have to maintain our own,
+              it was decided to see what hosted options were available. Matthew and I had a look at a few options and settled on Freshdesk. Matthew set up
+              the system and we trialled it briefly. The current system (Zammad) by then had been fixed, so we went with that in the end. I knew nothing about Zammad so thought it might be a good oppurtunity to learn more.
+             I created a new Linux VM in my Azure portal and sucessfully installed Zammad by following <a target="new" href="https://websiteforstudents.com/how-to-install-zammad-ticketing-system-on-ubuntu-18-04-16-04/"> this guide.</a> 
+             </p>
+             <center><img src="ZammadDashboard.PNG" width="700px" alt="slack screenshot"></center><br>
+            
+            <h4>Work Project</h4>
+            <p>This week I worked on: </p>
+            <ul><li>Writing and testing flows for the notifications.</li></ul>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="panel-group">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" href="#week5">Week 5: AWS Pipeline, Power Apps and flows</a>
+                </h4>
+              </div>
+              <div id="week5" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <h4>AWS</h4>
+                    <p>Our task this week was to <a target="new" href="https://aws.amazon.com/getting-started/projects/set-up-ci-cd-pipeline/?trk=gs_card">Set up a CI/CD pipeline on AWS</a>. </p>
+                  <h4>Work Project</h4>
+            <p>This week I worked on: </p>
+            <ul><li>Testing / refining flows for the notifications.</li>
+              <li>Initial design of Power App.</li>
+            </ul>
+                </div>
+                
+              </div>
             </div>
+          </div>
+          <div class="panel-group">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" href="#week6">Week 6: Azure Learning Path, User testing</a>
+                    </h4>
+                  </div>
+                  <div id="week6" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <h4>General</h4>
+                        <p>This week I completed the 12 modules in the Azure fundamentals learning path. This provided me with a great overview of 
+                          Azure services, and enabled me to get some hands on experience with the platform.</p>
+                        <h4>Work Project</h4>
+                        <p>This week I worked on: </p>
+                        <ul><li>Presented Apps to users for feedback.</li>
+                          <li></li>
+                        </ul>
+
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="panel-group">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a data-toggle="collapse" href="#week7">Week 7: Azure lab services, AWS billing</a>
+                        </h4>
+                      </div>
+                      <div id="week7" class="panel-collapse collapse">
+                        <div class="panel-body">Panel Body</div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel-group">
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h4 class="panel-title">
+                              <a data-toggle="collapse" href="#week8">Week 8: 2nd work project </a>
+                            </h4>
+                          </div>
+                          <div id="week8" class="panel-collapse collapse">
+                            <div class="panel-body">Panel Body</div>
+                            <h4>Work Project</h4>
+                        <p>This week I worked on: </p>
+                        <ul><li>Data requirements for venue agreement expiry notifications</li>
+                          <li></li>
+                        </ul>
+                          </div>
+                        </div>
+                      </div>
             <!--<h2 class="page-description text-center">Project 2</h2><br><br>
             <div class="row">
                 <div class="col-sm-6 col-md-4">
@@ -71,7 +265,7 @@
                             <img src="./cv.jpg" alt="CV">
                         </a>
                         <div class="caption">
-                            <h3>Curriculum Vitae</h3>
+                            <h4>Curriculum Vitae</h4>
                             <p>My CV. You can view, print, download, and if you're not using Edge browser, you can even rotate it. Do it all here. </p>
                         </div>
                     </div>
@@ -82,7 +276,7 @@
                             <img src="Journey.jpg" alt="Story">
                         </a>
                         <div class="caption">
-                            <h3>The Journey</h3>
+                            <h4>The Journey</h4>
                             <p>After some initial doubts, read about how I didn't stop believing in the software engineering process. This is my reflective essay.</p>
                         </div>
                     </div>
@@ -93,7 +287,7 @@
                             <img src="./links.jpg" alt="Links">
                         </a>
                         <div class="caption">
-                            <h3>Links & Resources</h3>
+                            <h4>Links & Resources</h4>
                             <p>Fill your boots with the various links and resources that I used and created during the software engineering project.
                             </p>
                         </div>
@@ -107,6 +301,8 @@
     <script>
         baguetteBox.run('.tz-gallery');
     </script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>
