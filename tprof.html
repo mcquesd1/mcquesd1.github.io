@@ -281,15 +281,21 @@
                             <p>Data will come from a Sharepoint document library that holds venue agreements for each venue in PDF format. Each file is tagged with metadata
                                 to enable workflows to run on them and produce useful information about the files to users. The columns of interest for this notification are the ExpiryDate and venueNumber.
                                 Due to the data hierarchy, data will also be needed from the Sharepoint lists venueData (venueNumber, GMVNumber), and GMVData (GMVNumber, Rep). Lookups on these lists
-                                will need to be performed to obtain the venue rep details for the notifications.
+                                will need to be performed to obtain the venue rep details for the notifications. The data hierarchy is shown in the following image.
                             </p>
                             <center><img src="hierarchy.PNG" width="800px" style="border:1px solid grey" alt="slack screenshot"></center><br>
 <h4>Calculated fields</h4>
-<p>I added additional metadata to the library in order to perform the calculations required to show the number of days to run on an agreement. I added 
-    a column with a <code>now()</code> function to get the current date, and a daysToRun column which subtracted the expiry date from the current date. <code>=IF(AgreementStatus="Active",ROUND((ExpiryDate-TodaysDate),0))</code> 
-This didn't work as the <code>now()</code> function provided the current date at the time of creation, but didn't dynamically update each day.<br>
-The fix was to create a flow that would run each day and update the column.  </p>
+<p>I added additional metadata to the library objects in order to perform the calculations required to show the number of days to run on an agreement. I added 
+    a column "todaysDate" with a <code>now()</code> function to get the current date, and a daysToRun column which subtracted the expiryDate from todaysDate. <code>=IF(AgreementStatus="Active",ROUND((ExpiryDate-TodaysDate),0))</code> 
+This didn't work as the <code>now()</code> function provided the current date at the time of creation, but didn't dynamically update each day.
+The fix was to create the following flow that would run each day and update the todaysDate column with the correct value to make the calculation.   </p>
+<center><img src="venfix1.PNG" width="500px" style="border:1px solid grey" alt="slack screenshot"></center>
+<center><img src="venfix2.PNG" width="500px" style="border:1px solid grey" alt="slack screenshot"></center><br>
 
+<h3>Notification Logic</h3>
+
+<p>Based on the data required the logic would consist of getting the intial library data, then using a series of nested foreach loops to obtain the relevant information for each item. The diagram below shows the flow logic  </p>
+<center><img src="venALogic1.PNG" width="500px" style="border:1px solid grey" alt="slack screenshot"></center><br>
                     </div>
                     
                   </div>
