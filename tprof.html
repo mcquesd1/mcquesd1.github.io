@@ -284,46 +284,7 @@
                                 will need to be performed to obtain the venue rep details for the notifications. The data hierarchy is shown in the following image.
                             </p>
                             <center><img src="hierarchy.PNG" width="800px" style="border:1px solid grey" alt="slack screenshot"></center><br>
-<h4>Calculated fields</h4>
-<p>I added additional metadata to the library objects in order to perform the calculations required to show the number of days to run on an agreement. I added 
-    a column "todaysDate" with a <code>now()</code> function to get the current date, and a daysToRun column which subtracted the expiryDate from todaysDate. <code>=IF(AgreementStatus="Active",ROUND((ExpiryDate-TodaysDate),0))</code> 
-This didn't work as the <code>now()</code> function provided the current date at the time of creation, but didn't dynamically update each day.
-The fix was to create the following flow that would run each day and update the todaysDate column with the correct value to make the calculation.   </p>
-<center><img src="venfix1.PNG" width="500px" style="border:1px solid grey" alt="slack screenshot"></center>
-<center><img src="venfix2.PNG" width="500px" style="border:1px solid grey" alt="slack screenshot"></center><br>
 
-<h3>Notification Logic</h3>
-
-<p>Based on the data required the logic would consist of getting the intial library data, then using a series of nested foreach loops to obtain the relevant information for each item. The diagram below shows the flow logic.  </p>
-<center><img src="venALogic1.PNG" width="500px" style="border:1px solid grey" alt="slack screenshot"></center><br>
-
-<div class="row">
-        <div class="col-md-8">
-            <p class="text-left">
-                The flow failed to run because OData filtering cannot filter on a calculated field such as "DaysToRun". I tried removing the filtering and edited the logic
-                of the flow. I used a conditional logic block instead to get only the items where the DaysToRun was at the desired intervals. This also failed for the same reason, so it was back to 
-                the drawing board. If the calculation couldn't be pulled in from the library, I decided to make the calculation in the flow itself. The steps for this were:
-                <ul class="text-left">
-                        <li>Use a compose action with a ticks function to provide the current date in the required format. <code>ticks(formatDateTime(utcNow(),'yyyy-MM-dd'))</code> </li>
-                        <li>Use another compose action with a ticks function and pass it the expiryDate field from the library item. <code>ticks(item()?['ExpiryDate'])</code></li>
-                        <li>Perform the calculation from the two outputs above. <code>div(sub(outputs('expiryDateValue'),outputs('nowDateValue')),864000000000)</code> </li>
-                        <li>Set a variable "DateDiff" with the calculation result.</li>
-                    </ul>
-            </p>
-
-        </div>
-        <div class="col-md-3">
-            <img alt="Bootstrap Image Preview" width="300px" style="border:1px solid grey" src="flowFailCalcDays.PNG" />
-        </div>
-    </div>
-    <h4>Updated notification logic</h4>
-<p>
-    The next step was to evaluate the DateDiff variable. For this I used a conditional logic block with a string of OR operators where DateDiff would equal one of the desired intervals.
-    If this evaluated to true, a switch statement then set a string variable "RemainingDays" with a text value such as 1 day, or 2 weeks. RemainingDays was then used to populate the email notification.
-    <center><img src="venlogicMark2.PNG" width="650px" style="border:1px solid grey" alt="slack screenshot"></center><br>    
-
-
-</p>
                     </div>
                     
                   </div>
