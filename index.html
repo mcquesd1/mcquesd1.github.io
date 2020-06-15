@@ -27,245 +27,481 @@
                     Ops work with the BIT platform.
                 </li>
                 <li>
-                    Learning about the DevOps pipeline, Azure and AWS.
+                    Learning about Azure and AWS cloud services.
                 </li>
+                <li>Researching Azure labs services and Azure Dev-test labs.</li>
                 <li>
-                    Creating various modules for my employer. <a href="tprof.html">Click here for more.</a>
+                    Creating modules for my employer. <a href="tprof.html">Click here for more.</a>
                 </li>
+
             </ul>
         </p>
 
-       
-            <h2 class="text-center"></h2>
-  
-  <div class="panel-group">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" href="#week1">Week 1: Intro</a>
-        </h4>
-      </div>
-      <div id="week1" class="panel-collapse collapse">
-        <div class="panel-body">
-                <p>Gitlab was down which was a headache for a lot of people in the BIT. It was the Ops team that had the pleasure of trying to get it working again. I shadowed James the 2nd year project guy as he / we tried to fix it. Really I had little idea as to what was going on. The certificates needed renewing on the gitlab server and the gateway. Once that was done there was still an error appearing to come from the IDP. 
-                         I had been reading the wiki trying to get a feel for the landscape. I read that the IDP needed keys updated every January. I messaged this to James. He passed this on to Rob. This turned out to be the problem holding it up, so I was happy 
-                        that I had at least made a small contribution to the team.</p>
-                    <center><img src="GitlabFixChat.jpg" width="500px" alt="slack screenshot"></center>
+        <br>
+        <h2 class="text-center">Timeline</h2><br>
+        <p class="text-center">Click to expand each panel</p>
 
-        </div>
-        
-      </div>
-    </div>
-  </div>
-  <div class="panel-group">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" href="#week2">Week 2: CI/CD Pipeline, Azure fundamentals.</a>
-        </h4>
-      </div>
-      <div id="week2" class="panel-collapse collapse">
-        <div class="panel-body">
-            <p>
-                Week 2 was about settling on a path for the semester. For me that was going to be a combination of learning about DevOps concepts, Azure and AWS, as well as completing a project for my employer.
-                <h4>DevOps</h4>
-                <p>I learned of the CI/CD pipeline. I watched a couple of intructional videos on <a target="new" href="https://www.youtube.com/watch?v=Jav4vbUrqII&t=314s">how to setup a Gitlab pipeline</a>, and <a href="https://www.youtube.com/watch?v=2MBhxk2chhM&pbjreload=10">how to setup a runner.</a> The runner proved difficult and I could not get it working. </p>
-                <center><img src="failedPipeline.png" width="500px" alt="slack screenshot"></center>
-                <h4>Azure</h4>
-                <p>As I knew nothing of Azure I started the <a href="https://docs.microsoft.com/en-us/learn/paths/azure-fundamentals/" target="new">Fundamentals learning path.</a> This consisted of 12 modules covering the basics. I created an Azure account and checked out the portal. </p>
-            </p><br>
-            <h4>Work Project</h4>
-            <p>This week I worked on: </p>
-            <ul><li>Confirming data required in key persons Sharepoint list.</li>
-                <li>Troubleshoot date issue on data upload. </li>
-        </ul>
-                
-            </p>
-        </div>
-        
-      </div>
-    </div>
-  </div>
-  <div class="panel-group">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" href="#week3">Week 3: Created Trello board, Azure VM - Gitlab runner, Test Flows.</a>
-      
-      </div>
-      <div id="week3" class="panel-collapse collapse">
-        <div class="panel-body">
-          
-        <h4>DevOps / Azure</h4>
-            <p>Now that I had created an Azure account I used this to try and get my Gitlab runner up, and did the following:
-              <ul>
-                <li>Created a Linux VM in Azure.</li>
-                <li>Used this guide to <a target="new" href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04">install docker on Ubuntu.</a></li>
-                <center><img src="dockerInstall.png" width="700px" alt="slack screenshot"></center><br>
-                <li><a target="new" href="https://docs.gitlab.com/runner/install/docker.html">Installed Gitlab runner on a container.</a></li>
-                <li><a target="new" href="https://docs.gitlab.com/runner/register/index.html#docker">Register the Docker runner.</a></li>
-              </ul>
-             This proved sucessful and my pipeline was now working with the newly created docker runner.</p>
-            <center><img src="pipelineSucess.png" width="700px" alt="slack screenshot"></center>
-        <h4>Work Project</h4>
-            <p>This week I worked on: </p>
-            <ul><li>Writing and testing flows for the notifications.</li>
-      </ul>
-      </div>
-    </div>
-  </div>
-</div>
-  <div class="panel-group">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-              <a data-toggle="collapse" href="#week4">Week 4: AWS Intro, Ticketing system.</a>
-            </h4>
-          </div>
-          <div id="week4" class="panel-collapse collapse">
-            <div class="panel-body">
-                <h4>AWS</h4>
-                <p>This week I watched an <a target="new" href="https://www.youtube.com/watch?v=Z3SYDTMP3ME&t=1671s">AWS introductory video</a>, and completed the <a target="new" href="https://aws.amazon.com/getting-started/projects/break-monolith-app-microservices-ecs-docker-ec2/module-one/">"Break the monolith"</a> project, 
-                  which separates a monolithic application into microservices using AWS technologies.
-             
-                 </p><br>
-            <h4>Ops</h4>
-            <p>As a group we decided that we needed a ticketing system as the current one was broken. Rather than have to maintain our own,
-              it was decided to see what hosted options were available. Matthew and I had a look at a few options and settled on Freshdesk. Matthew set up
-              the system and we trialled it briefly. The current system (Zammad) by then had been fixed, so we went with that in the end. I knew nothing about Zammad so thought it might be a good oppurtunity to learn more.
-             I created a new Linux VM in my Azure portal and sucessfully installed Zammad by following <a target="new" href="https://websiteforstudents.com/how-to-install-zammad-ticketing-system-on-ubuntu-18-04-16-04/"> this guide.</a> 
-             </p>
-             <center><img src="ZammadDashboard.PNG" width="700px" alt="slack screenshot"></center><br>
-            
-            <h4>Work Project</h4>
-            <p>This week I worked on: </p>
-            <ul><li>Writing and testing flows for the notifications.</li></ul>
-          </div>
-        </div>
-        </div>
-      </div>
-      <div class="panel-group">
+        <div class="panel-group">
             <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" href="#week5">Week 5: AWS Pipeline, Power Apps and flows</a>
-                </h4>
-              </div>
-              <div id="week5" class="panel-collapse collapse">
-                <div class="panel-body">
-                    <h4>AWS</h4>
-                    <p>Our task this week was to <a target="new" href="https://aws.amazon.com/getting-started/projects/set-up-ci-cd-pipeline/?trk=gs_card">Set up a CI/CD pipeline on AWS</a>. </p>
-                    <center><img src="AWSPipe.PNG" width="500px" alt="slack screenshot"></center><br>
-                    <h4>Work Project</h4>
-            <p>This week I worked on: </p>
-            <ul><li>Testing / refining flows for the notifications.</li>
-              <li>Initial design of Power App.</li>
-              <li>Ran tests with the banking app.</li>
-            </ul>
-                </div>
-                
-              </div>
-            </div>
-          </div>
-          <div class="panel-group">
-                <div class="panel panel-default">
-                  <div class="panel-heading">
+                <div class="panel-heading">
                     <h4 class="panel-title">
-                      <a data-toggle="collapse" href="#week6">Week 6: Azure Learning Path, Work app goes live</a>
+                        <a data-toggle="collapse" href="#week1">Week 1: Intro.</a>
                     </h4>
-                  </div>
-                  <div id="week6" class="panel-collapse collapse">
+                </div>
+                <div id="week1" class="panel-collapse collapse">
                     <div class="panel-body">
-                        <h4>Azure</h4>
-                        <p>This week I completed the 12 modules in the Azure fundamentals learning path. This provided me with a great overview of 
-                          Azure services, and enabled me to get some hands on experience with the platform. From here I will look at an administrator learning path.</p>
-                          <center><img src="azurefundamentals.PNG" width="400px" alt="slack screenshot"></center><br>
+                        <p>Gitlab was down which was a headache for a lot of people in the BIT. It was the Ops team that had the pleasure of trying to get it working again. I shadowed James the 2nd year project guy as he / we tried to fix it. Really I had
+                            little idea as to what was going on. The certificates needed renewing on the gitlab server and the gateway. Once that was done there was still an error appearing to come from the IDP. I had been reading the wiki trying to get
+                            a feel for the landscape. I read that the IDP needed keys updated every January. I messaged this to James. He passed this on to Rob. This turned out to be the problem holding it up, so I was happy that I had at least made a
+                            small contribution to the team.</p>
+                        <center><img src="GitlabFixChat.jpg" width="500px" alt="slack screenshot"></center>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#week2">Week 2: CI/CD Pipeline, Azure fundamentals.</a>
+                    </h4>
+                </div>
+                <div id="week2" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p>
+                            Week 2 was about settling on a path for the semester. For me that was going to be a combination of learning about DevOps concepts, Azure and AWS, as well as completing a project for my employer.
+                            <h4>DevOps</h4>
+                            <p>I learned of the CI/CD pipeline. I watched a couple of intructional videos on <a target="new" href="https://www.youtube.com/watch?v=Jav4vbUrqII&t=314s">how to setup a Gitlab pipeline</a>, and <a href="https://www.youtube.com/watch?v=2MBhxk2chhM&pbjreload=10">how to setup a runner.</a>                                The runner proved difficult and I could not get it working. </p>
+                            <center><img src="failedPipeline.png" width="500px" alt="slack screenshot"></center>
+                            <h4>Azure</h4>
+                            <p>As I knew nothing of Azure I started the <a href="https://docs.microsoft.com/en-us/learn/paths/azure-fundamentals/" target="new">Fundamentals learning path.</a> This consisted of 12 modules covering the basics. I created an
+                                Azure account and checked out the portal. </p>
+                        </p><br>
                         <h4>Work Project</h4>
                         <p>This week I worked on: </p>
-                        <ul><li>Presented banking app to users for feedback.</li>
-                          <li>Made changes based on user feedback.</li>
-                          <li>Installed prerequisites on user PCs. Shared the app. Went live.</li>
+                        <ul>
+                            <li>Confirming data required in key persons Sharepoint list.</li>
+                            <li>Troubleshoot date issue on data upload. </li>
+                        </ul>
+
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#week3">Week 3: Created Trello board, Azure VM - Gitlab runner, Test Flows.</a>
+
+                </div>
+                <div id="week3" class="panel-collapse collapse">
+                    <div class="panel-body">
+
+                        <h4>DevOps / Azure</h4>
+                        <p>Now that I had created an Azure account I used this to try and get my Gitlab runner up, and did the following:
+                            <ul>
+                                <li>Created a Linux VM in Azure.</li>
+                                <li>Used this guide to <a target="new" href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04">install docker on Ubuntu.</a></li>
+                                <center><img src="dockerInstall.png" width="700px" alt="slack screenshot"></center><br>
+                                <li><a target="new" href="https://docs.gitlab.com/runner/install/docker.html">Installed Gitlab runner on a container.</a></li>
+                                <li><a target="new" href="https://docs.gitlab.com/runner/register/index.html#docker">Register the Docker runner.</a></li>
+                            </ul>
+                            This proved sucessful and my pipeline was now working with the newly created docker runner.</p>
+                        <center><img src="pipelineSucess.png" width="700px" alt="slack screenshot"></center>
+                        <h4>Work Project</h4>
+                        <p>This week I worked on: </p>
+                        <ul>
+                            <li>Writing and testing flows for the notifications.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#week4">Week 4: AWS Intro, Ticketing system.</a>
+                    </h4>
+                </div>
+                <div id="week4" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <h4>AWS</h4>
+                        <p>This week I watched an <a target="new" href="https://www.youtube.com/watch?v=Z3SYDTMP3ME&t=1671s">AWS introductory video</a>, and completed the <a target="new" href="https://aws.amazon.com/getting-started/projects/break-monolith-app-microservices-ecs-docker-ec2/module-one/">"Break the monolith"</a>                            project, which separates a monolithic application into microservices using AWS technologies.
+
+                        </p><br>
+                        <h4>Ops</h4>
+                        <p>As a group we decided that we needed a ticketing system as the current one was broken. Rather than have to maintain our own, it was decided to see what hosted options were available. Matthew and I had a look at a few options and
+                            settled on Freshdesk. Matthew set up the system and we trialled it briefly. The current system (Zammad) by then had been fixed, so we went with that in the end. I knew nothing about Zammad so thought it might be a good oppurtunity
+                            to learn more. I created a new Linux VM in my Azure portal and sucessfully installed Zammad by following <a target="new" href="https://websiteforstudents.com/how-to-install-zammad-ticketing-system-on-ubuntu-18-04-16-04/"> this guide.</a>
+                        </p>
+                        <center><img src="ZammadDashboard.PNG" width="700px" alt="slack screenshot"></center><br>
+
+                        <h4>Work Project</h4>
+                        <p>This week I worked on: </p>
+                        <ul>
+                            <li>Writing and testing flows for the notifications.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#week5">Week 5: AWS Pipeline, Power Apps and flows</a>
+                    </h4>
+                </div>
+                <div id="week5" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <h4>AWS</h4>
+                        <p>Our task this week was to <a target="new" href="https://aws.amazon.com/getting-started/projects/set-up-ci-cd-pipeline/?trk=gs_card">Set up a CI/CD pipeline on AWS</a>. </p>
+                        <center><img src="AWSPipe.PNG" width="500px" alt="slack screenshot"></center><br>
+                        <h4>Work Project</h4>
+                        <p>This week I worked on: </p>
+                        <ul>
+                            <li>Testing / refining flows for the notifications.</li>
+                            <li>Initial design of Power App.</li>
+                            <li>Ran tests with the banking app.</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#week6">Week 6: Azure Learning Path, Work app goes live</a>
+                    </h4>
+                </div>
+                <div id="week6" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <h4>Azure</h4>
+                        <p>This week I completed the 12 modules in the Azure fundamentals learning path. This provided me with a great overview of Azure services, and enabled me to get some hands on experience with the platform. From here I will look at
+                            an administrator learning path.</p>
+                        <center><img src="azurefundamentals.PNG" width="400px" alt="slack screenshot"></center><br>
+                        <h4>Work Project</h4>
+                        <p>This week I worked on: </p>
+                        <ul>
+                            <li>Presented banking app to users for feedback.</li>
+                            <li>Made changes based on user feedback.</li>
+                            <li>Installed prerequisites on user PCs. Shared the app. Went live.</li>
                         </ul>
 
                     </div>
-                    
-                  </div>
+
                 </div>
-              </div>
-              <div class="panel-group">
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title">
-                      <a data-toggle="collapse" href="#week78">Week 7 & 8: Mid term break</a>
-                    </h4>
-                  </div>
-                  <div id="week78" class="panel-collapse collapse">
-                    <div class="panel-body">Lockdown</div>
-                    
-                  </div>
-                </div>
-              </div>
-              <div class="panel-group">
-                    <div class="panel panel-default">
-                      <div class="panel-heading">
-                        <h4 class="panel-title">
-                          <a data-toggle="collapse" href="#week9">Week 9: Azure lab services, AWS billing and Cloud Academy</a>
-                        </h4>
-                      </div>
-                      <div id="week9" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <h4>AWS</h4>
-                            <p>Learned the hard way about the importance of cleaning up after completing AWS tasks. My credit card was charged
-                              because I didn't remove the resources from the Microservices lab and the CI/CD Pipeline lab. Won't make that mistake again!
-                            </p><br><p>This week I made a start on the Academy cloud operations modules, completing the following:
-                              <ul>
-                                <li>Install and configure the AWS CLI</li>
-                                <li>Using AWS systems manager</li>
-                                <li>Create an S3 website</li>
-                              </ul>
-                            </p><br>
-                            <h4>Azure lab services</h4>
-                            <p>Started looking into three different roles, that of IT administrator, instructor, and user. I watched this <a target="new" href="https://www.youtube.com/watch?v=m2NHi6xSt4Q&t=628s"> very informative video</a> which did a great job at 
-                            explaining how lab services works and how to create one. </p>
-                            <center><img src="azurelabroles.PNG" width="400px" alt="slack screenshot"></center><br>
-                           
-                        </div>
-                        
-                      </div>
-                    </div>
-                  </div>
-                  <div class="panel-group">
-                        <div class="panel panel-default">
-                          <div class="panel-heading">
-                            <h4 class="panel-title">
-                              <a data-toggle="collapse" href="#week10">Week 10: Azure lab:RDP on Linux. Work project 2 start </a>
-                            </h4>
-                          </div>
-                          <div id="week10" class="panel-collapse collapse">
-                            <div class="panel-body">
-                                <h4>Azure lab services</h4>
-                                <p>Set up a lab through the Azure Portal, and added a "lab creator" role. Used the creator role to design a lab. <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/use-remote-desktop" target="new">Configured RDP access to the Linux
-                                 lab VMs.</a></p>
-                                  <center><img src="LinuxRDP.PNG" width="400px" alt="slack screenshot"></center><br>
-                            <h4>Work Project</h4>
-                        <p>This week I worked on: </p>
-                        <ul><li>Data requirements for venue agreement expiry notifications</li>
-                          
-                        </ul>
-                      </div>
-                          </div>
-                        </div>
-                      </div>
-            
+            </div>
         </div>
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#week78">Week 7 & 8: Mid term break</a>
+                    </h4>
+                </div>
+                <div id="week78" class="panel-collapse collapse">
+                    <div class="panel-body">Lockdown</div>
+
+                </div>
+            </div>
+        </div>
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#week9">Week 9: Azure lab services, AWS billing and Cloud Academy</a>
+                    </h4>
+                </div>
+                <div id="week9" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <h4>AWS</h4>
+                        <p>Learned the hard way about the importance of cleaning up after completing AWS tasks. My credit card was charged because I didn't remove the resources from the Microservices lab and the CI/CD Pipeline lab. Won't make that mistake
+                            again!
+                        </p><br>
+                        <p>This week I made a start on the Academy cloud operations modules, completing the following:
+                            <ul>
+                                <li>Install and configure the AWS CLI.</li>
+                                <li>Using AWS systems manager.</li>
+                                <li>Create an S3 website.</li>
+                            </ul>
+                        </p><br>
+                        <h4>Azure lab services</h4>
+                        <p>Started looking into three different roles, that of IT administrator, instructor, and user. I watched this <a target="new" href="https://www.youtube.com/watch?v=m2NHi6xSt4Q&t=628s"> very informative video</a> which did a great
+                            job at explaining how lab services works and how to create one. </p>
+                        <center><img src="azurelabroles.PNG" width="400px" alt="slack screenshot"></center><br>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#week10">Week 10: Azure lab services:RDP on Linux. Started 2nd work project </a>
+                    </h4>
+                </div>
+                <div id="week10" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <h4>Azure lab services</h4>
+                        <p>Set up a lab through the Azure Portal, and added a "lab creator" role. Used the creator role to design a lab. <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/use-remote-desktop" target="new">Configured RDP access to the Linux
+                                 lab VMs.</a></p>
+                        <center><img src="LinuxRDP.PNG" width="400px" alt="slack screenshot"></center><br>
+                        <h4>AWS</h4>
+                        <p>This week I completed the following Academy cloud operations modules:
+                            <ul>
+                                <li>Creating Amazon EC2 instances.</li>
+                                <li>Troubleshoot create instance.</li>
+                                <li>Using auto scaling.</li>
+                                <li>Amazon route 53 failover routing.</li>
+                                <li>Working with AWS Lambda.</li>
+                                <li>Migrate to Amazon RDS.</li>
+                            </ul>
+                        </p><br>
+                        <h4>Work Project</h4>
+                        <p>This week I worked on: </p>
+                        <ul>
+                            <li>Data requirements for venue agreement expiry notifications.</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#week11">Week 11: Azure lab services report. AWS Academy cloud operations</a>
+                    </h4>
+                </div>
+                <div id="week11" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <h4>Azure lab services</h4>
+                        <p>Wrapped up testing the lab. Added users, modified quotas and the template. Wrote and submitted a report to Faisal.
+                            </a>
+                        </p>
+                        <br>
+                        <h4>AWS</h4>
+                        <p>This week I completed the following Academy cloud operations modules:
+                            <ul>
+
+                                <li>Configure VPC.</li>
+                                <li>Troubleshoot a VPC.</li>
+                                <li>Managing storage.</li>
+                                <li>Work with Amazon S3.</li>
+                                <li>Monitoring infrastructure.</li>
+
+                            </ul>
+                            <center><img style="border: 1px solid;" src="AWSTVPC.PNG" width="600px" alt="slack screenshot"></center><br>
+                        </p><br>
+                        <h4>Work Project</h4>
+                        <p>This week I worked on: </p>
+                        <ul>
+                            <li>Flow creation to fix date not updating automatically.</li>
+                            <li>Designing the notification logic for the main flow.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#week12">Week 12: AWS Academy cloud operations</a>
+                    </h4>
+                </div>
+                <div id="week12" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <h4>Azure lab services</h4>
+                        <p>Put a few ideas together about how to best present this to the group on Monday.
+                            <ul>
+                                <li>Role descriptions.</li>
+                                <li>Instructor view of Lab portal.</li>
+                                <li>Dashboard walkthrough.</li>
+                            </ul>
+                        </p>
+                        <br>
+                        <h4>AWS</h4>
+                        <p>This week I completed the following Academy cloud operations modules:
+                            <ul>
+
+                                <li>Working with AWS Cloudtrail.</li>
+                                <li>Managing resources.</li>
+                                <li>Optimize utilization.</li>
+                                <li>Automation with CloudFormation.</li>
+                                <li>Troubleshoot CloudFormation.</li>
+
+                            </ul>
+                            <center><img style="border: 1px solid;" src="AWSCT.PNG" width="600px" alt="slack screenshot"></center><br>
+                        </p><br>
+                        <h4>Work Project</h4>
+                        <p>This week I worked on: </p>
+                        <ul>
+                            <li>Redesigning the logic to enable the flow to run without error.</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#week13">Week 13: Went live on work module. Azure Labs demo.</a>
+                    </h4>
+                </div>
+                <div id="week13" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <h4>Azure lab services</h4>
+                        <p>Presented an overview of Lab services at Monday's meeting. We discussed the pros and cons of the application and its suitability for OP.
+
+                        </p>
+                        <br>
+
+                        <h4>Work Project</h4>
+                        <p>This week I worked on: </p>
+                        <ul>
+                            <li>Testing. Created some test entries, and ran the new module in tandem with the old system. It tested OK and went live.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#week14">Week 14: Azure Dev-test Labs.</a>
+                    </h4>
+                </div>
+                <div id="week14" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <h4>Azure Dev-test Labs</h4>
+                        <p>Began researching Azure Dev-test Labs as an alternative to Azure Lab Services.
+
+                        </p>
+                        <br>
+
+                        <h4>BIT Platform</h4>
+                        <p>James and I collaborated on the cert updates. We had a Teams audio call and screen-share session. There were issues and ultimately the certs were not renewed. James to continue to work on them, as I will be out of town for the
+                            next few days. </p>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#week15">Week 15: More Azure Dev-test Labs.</a>
+                    </h4>
+                </div>
+                <div id="week15" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <h4>Azure Dev-test Labs</h4>
+                        <p>Setup a lab and experimented with some features.
+
+                        </p>
+                        <br>
+
+                        <h4></h4>
+                        <p> </p>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#week16">Week 16: Yet still more Azure Dev-test Labs.</a>
+                    </h4>
+                </div>
+                <div id="week16" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <h4>Azure Dev-test Labs</h4>
+                        <p>Continued testing Dev-test labs, and began writing the report.
+
+                        </p>
+                        <br>
+
+                        <h4></h4>
+                        <p> </p>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#week17">Week 17: Joining the Army</a>
+                    </h4>
+                </div>
+                <div id="week17" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <h4>Azure Dev-test Labs</h4>
+                        <p>Finished up the combined report for Lab services and Dev-test labs.
+
+                        </p>
+                        <br>
+
+                        <h4>BIT Platform</h4>
+                        <p>Joined Rob's army and got introduced to the team and the tasks ahead. Began looking at SAML for the VM Webstore task. </p><br>
+                        <h4>General</h4>
+                        <p>Started writing the reflective report, updating portfolio.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#week18">Week 18: Final Week</a>
+                    </h4>
+                </div>
+                <div id="week18" class="panel-collapse collapse">
+                    <div class="panel-body">
+
+                        <h4>BIT Platform</h4>
+                        <p>Met with Cathur and discussed hand over of Rob's army tasks. </p><br>
+                        <h4>General</h4>
+                        <p>Finishing up reports and portfolio.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
     <script>
         baguetteBox.run('.tz-gallery');
     </script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>
