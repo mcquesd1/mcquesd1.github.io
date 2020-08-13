@@ -1,0 +1,146 @@
+body {
+    background-color:white;
+    min-height: 100vh;
+    font: normal 16px sans-serif;
+    margin:0px;
+    
+}
+p{
+    line-height: 150%;
+    color: #000;
+}
+
+a{
+    color: #5959EF;
+}
+.gallery-container h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: bold;
+    color: #58595a;
+}
+
+.gallery-container p.page-description {
+    text-align: center;
+    margin: 30px auto;
+    font-size: 18px;
+    color: #85878c;
+}
+
+.tz-gallery {
+    padding: 40px;
+}
+
+.tz-gallery .thumbnail {
+    padding: 0;
+    margin-bottom: 30px;
+    background-color: #fff;
+    border-radius: 4px;
+    border: none;
+    transition: 0.15s ease-in-out;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06);
+}
+
+.tz-gallery .thumbnail:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+.tz-gallery .lightbox img {
+    border-radius: 4px 4px 0 0;
+}
+
+.tz-gallery .caption{
+    padding: 26px 30px;
+    text-align: center;
+}
+
+.tz-gallery .caption h3 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.tz-gallery .caption p {
+    font-size: 12px;
+    color: #7b7d7d;
+    margin: 0;
+}
+
+.baguetteBox-button {
+    background-color: transparent !important;
+}
+.container h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: bold;
+    color: #58595a;
+}
+
+.container p.page-description {
+    text-align: center;
+    margin: 30px auto;
+    font-size: 18px;
+    color: #85878c;
+}
+.blogShort{ border-bottom:1px solid #ddd;}
+.add{background: #333; padding: 10%; height: 300px;}
+
+.nav-sidebar { 
+    width: 100%;
+    padding: 8px 0; 
+    border-right: 1px solid #ddd;
+}
+
+ h2{color: #58595a;
+
+}
+ .margin10{margin-bottom:10px; margin-right:10px;
+}
+
+ .padder{
+    display:block;
+    height:70px; /* this is the height of your header */
+    margin-top:70px; /* this is again negative value of the height of your header */
+    visibility:hidden;
+ }
+ .padder2{
+    display:block;
+    height:50px; /* this is the height of your header */
+    margin-top:50px; /* this is again negative value of the height of your header */
+    visibility:hidden;
+ }
+ .row {
+     text-align: center;
+ }
+ .list-group {
+     text-align: left;
+ }
+ .btn {
+background-color: #CFCDCD;
+    font-weight:bold;
+ }
+ #ac{
+
+	margin-left: 20px;
+ }
+.feedback{
+
+    color:red;
+}
+.slack img { border: #000000 2px solid; }
+hr{
+    border-top: 1px solid #8c8b8b;
+}
+
+
+#footer{
+  width: 100%;
+  height: 90px;
+  background-color: #f7f7f7;
+  padding-top: 25px;
+  margin-top: 50px;
+  
+  border-top: 1px solid rgb(169, 168, 168);
+}
