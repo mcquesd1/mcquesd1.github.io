@@ -1,0 +1,23 @@
+.jumbotron {
+    min-height: 300px;
+}
+
+.jumbotron-image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.spacer {
+    height: 20px;
+}
+
+.card {
+    margin-top: 10px;
+    min-height: 100%;
+}
+
+.card-block {
+    padding-left: 10px;
+    padding-right: 10px;
+}
